@@ -9,7 +9,7 @@ return {
         "williamboman/mason-lspconfig.nvim",
         config = function()
             require("mason-lspconfig").setup({
-                ensure_installed = { "lua_ls", "tsserver", "prismals", "java_language_server", "html", "eslint", "cssls" }
+                ensure_installed = { "lua_ls", "tsserver", "prismals", "html", "eslint", "cssls" }
             })
         end
     },
@@ -20,7 +20,6 @@ return {
             lspconfig.lua_ls.setup({})
             lspconfig.tsserver.setup({})
             lspconfig.prismals.setup({})
-            lspconfig.java_language_server.setup({})
             lspconfig.html.setup({})
             lspconfig.eslint.setup({})
             lspconfig.cssls.setup({})

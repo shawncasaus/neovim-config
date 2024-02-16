@@ -9,7 +9,7 @@ return {
         "williamboman/mason-lspconfig.nvim",
         config = function()
             require("mason-lspconfig").setup({
-                ensure_installed = { "lua_ls", "tsserver", "prismals", "html", "eslint", "cssls" }
+                ensure_installed = { "lua_ls", "tsserver", "prismals", "html", "eslint", "cssls", "pyright" }
             })
         end
     },

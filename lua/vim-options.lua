@@ -5,3 +5,6 @@ vim.cmd("set shiftwidth=4")
 vim.cmd("set number")
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>nh", ":nohl", {})
+vim.keymap.set("n", "<leader>nN", ":set nonumber", {})
+vim.keymap.set("n", "<leader>N", ":set number", {})
+

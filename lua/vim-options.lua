@@ -7,4 +7,5 @@ vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>nh", ":nohl", {})
 vim.keymap.set("n", "<leader>nN", ":set nonumber", {})
 vim.keymap.set("n", "<leader>N", ":set number", {})
-
+vim.keymap.set("n", "<leader>S", ":w!", {})
+vim.keymap.set("n", "<leader>Sa", ":wa!", {})

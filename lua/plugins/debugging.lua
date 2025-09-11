@@ -14,6 +14,7 @@ return {
     },
     {
         "mfussenegger/nvim-dap",
+        enabled = not vim.g.vscode,
         dependencies = {
             "rcarriga/nvim-dap-ui",
             "leoluz/nvim-dap-go",

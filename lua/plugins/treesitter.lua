@@ -1,13 +1,29 @@
 return {
-    'nvim-treesitter/nvim-treesitter',
-    build=':TSUpdate',
-    config = function()
-        local config = require("nvim-treesitter.configs")
-        config.setup({
-            auto_install = true,
-            highlight = { enable = true },
-            indent = { enable = true },
-        })
-    end
+    "nvim-treesitter/nvim-treesitter",
+    enabled = not vim.g.vscode,
+    build = ":TSUpdate",
+    opts = {
+        -- make sure these are present (add/remove to taste)
+        ensure_installed = {
+            "rust", "lua", "vim", "vimdoc", "bash",
+            "javascript", "typescript", "json", "jsonc",
+            "markdown", "markdown_inline", "yaml", "html", "css",
+        },
+        auto_install = true,
+        highlight = { enable = true },
+        indent = { enable = true },
+        -- optional QoL:
+        incremental_selection = {
+            enable = true,
+            keymaps = {
+                init_selection = "gnn",
+                node_incremental = "grn",
+                scope_incremental = "grc",
+                node_decremental = "grm",
+            },
+        },
+    },
+    config = function(_, opts)
+        require("nvim-treesitter.configs").setup(opts)
+    end,
 }
-

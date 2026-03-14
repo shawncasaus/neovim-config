@@ -15,6 +15,9 @@ vim.keymap.set("n", "<leader>tn", ":tab new", {})
 vim.keymap.set("n", "<leader>e", function()
     vim.diagnostic.open_float(nil, { focus = false })
 end, { desc = "Show diagnostic under cursor" })
+vim.keymap.set("n", "<C-i>", function()
+    vim.diagnostic.open_float(nil, { focus = false })
+end, { desc = "Show diagnostic under cursor" })
 
 -- Window navigation
 vim.keymap.set("n", "<C-h>", "<C-w>h", { desc = "Move to left window" })

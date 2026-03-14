@@ -8,6 +8,8 @@ return {
             "rust", "lua", "vim", "vimdoc", "bash",
             "javascript", "typescript", "json", "jsonc",
             "markdown", "markdown_inline", "yaml", "html", "css",
+            -- Next.js / React
+            "tsx", "scss", "prisma", "graphql",
         },
         auto_install = true,
         highlight = { enable = true },
